@@ -1,0 +1,23 @@
+.back-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    vertical-align: middle; 
+    width: 100%;
+    background-color: rgba(50, 60, 71, 0.5);
+    z-index: 101;
+}
+
+.dialog-container {
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+    margin-top: 150px;
+    width: 400px;
+    background:rgb(243, 245, 247);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    padding: 10px;
+    z-index: 102;
+}
+
