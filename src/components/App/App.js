@@ -27,7 +27,7 @@ export default class App extends React.Component {
 				<BrowserRouter>
 					<Navbar />
 					<Switch>
-						<Route exact path='/' component={Main} />
+						<Route exact path='/news_app/' component={Main} />
 						<Route path='/news/' component={News} />
 					</Switch>
 				</BrowserRouter>

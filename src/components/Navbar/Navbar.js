@@ -34,7 +34,7 @@ class Navbar extends React.Component {
                 <nav className="navbar navbar-expand navbar-dark">
                     <ul className="navbar-nav ">
                         <li className="navbar item">
-                            <NavLink exact to="/" className="nav-link">Главная</NavLink>
+                            <NavLink exact to="/news_app/" className="nav-link">Главная</NavLink>
                         </li>
                         <li className="navbar item">
                             <NavLink to="/news/" className="nav-link">Новости</NavLink>
