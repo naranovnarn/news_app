@@ -3,3 +3,7 @@ export const LOG_IN_SUCCESS = "LOG_IN_SUCCESS";
 export const STOP_LOG_IN = "STOP_LOG_IN";
 export const LOG_OUT = "LOG_OUT";
 export const CREATE_NEWS = "CREATE_NEWS";
+export const GET_DATA_LOCAL = "GET_DATA_LOCAL";
+export const DELETE_ITEM = "DELETE_ITEM";
+export const APPROVE_ITEM = "APPROVE_ITEM";
+export const FILTER_NEWS = "FILTER_NEWS";

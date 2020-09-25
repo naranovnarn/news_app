@@ -9,15 +9,15 @@ class PopUp extends React.Component {
 
     openModal = () => {
         if (this.props.authorized) {
-            this.props.log_out()
+            this.props.log_out();
         } else {
-            this.props.log_in()
+            this.props.log_in();
         }
     }
 
     closeModal = (e) => {
         if (e.target === e.currentTarget) {
-            this.props.stop_log_in()
+            this.props.stop_log_in();
         }
     }
 
@@ -51,13 +51,13 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         log_in: () => {
-            dispatch(log_in())
+            dispatch(log_in());
         },
         stop_log_in: () => {
-            dispatch(stop_log_in())
+            dispatch(stop_log_in());
         },
         log_out: () => {
-            dispatch(log_out())
+            dispatch(log_out());
         }
     };
 };

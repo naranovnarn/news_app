@@ -13,7 +13,7 @@ const Main = (props) => {
             </div>
         </div>
     );
-}
+};
 
 const mapStateToProps = (state) => {
     return {

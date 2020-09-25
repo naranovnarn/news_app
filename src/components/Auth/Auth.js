@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import { log_in_success, stop_log_in } from '../../redux/actionCreator';
 import './Auth.css';
 
+
+
 class Auth extends React.Component  {
 
     state = {
@@ -17,7 +19,7 @@ class Auth extends React.Component  {
         const users = {
             admin: { login: 'admin', password: 'admin', role: 'admin'},
             user: { login: 'user', password: 'user', role: 'user'}
-        }
+        };
         const { login , password } = this.state;
 
         if (login === users.admin.login && password === users.admin.password) {
@@ -96,10 +98,10 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         log_in_success: (login) => {
-        dispatch(log_in_success(login))
+        dispatch(log_in_success(login));
         },
         stop_log_in: () => {
-        dispatch(stop_log_in())
+        dispatch(stop_log_in());
         }
     };
 };

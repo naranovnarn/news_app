@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { createStore, applyMiddleware, compose  } from 'redux';
 import { Provider } from 'react-redux';
 import reducer from '../../redux/reducer';
-import { Navbar } from '../Navbar/Navbar';
+import Navbar from '../Navbar/Navbar';
 import News from '../../pages/News/News';
 import './App.css';
 import Main from '../../pages/Main/Main';
@@ -20,6 +20,7 @@ const enhancer = composeEnhancers(
 const store = createStore(reducer, enhancer);
 
 export default class App extends React.Component {
+
 	render() {
 		return (
 			<Provider store={store}>

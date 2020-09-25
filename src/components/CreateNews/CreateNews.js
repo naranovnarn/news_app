@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 class CreateNews extends React.Component {
 
     state = {
-        name: '',
+        name: '' ,
         text: '', 
         data: '',
         isApproved: false
@@ -43,9 +43,9 @@ class CreateNews extends React.Component {
             name: '',
             text: '', 
             data: '',
+            id: '',
             isApproved: false
-        })
-        console.log(this.state)
+        });
     };
 
     render() {
@@ -54,26 +54,26 @@ class CreateNews extends React.Component {
         
         return (
             <div className="CreateNews">
-            <h3>Создать новость</h3>
-            <form onSubmit={this.submitHandler}>
-                <Input 
-                    label="Название" 
-                    onChange={this.onChangeNameHandler}
-                    value={name}
-                />
-                <Input 
-                    label="Текст" 
-                    onChange={this.onChangeTextHandler}
-                    value={text}
-                />
-                <Button                     
-                    type="primary"
-                    onClick={this.createNewHandler}
-                >
-                    Создать новость
-                </Button>
-            </form>
-        </div>
+                <h3>Создать новость</h3>
+                <form onSubmit={this.submitHandler}>
+                    <Input 
+                        label="Название" 
+                        onChange={this.onChangeNameHandler}
+                        value={name}
+                    />
+                    <Input 
+                        label="Текст" 
+                        onChange={this.onChangeTextHandler}
+                        value={text}
+                    />
+                    <Button                     
+                        type="primary"
+                        onClick={this.createNewHandler}
+                    >
+                        Создать новость
+                    </Button>
+                </form>
+            </div>
         );
     }
 };
@@ -82,7 +82,7 @@ class CreateNews extends React.Component {
 const mapDispatchToProps = (dispatch) => {
     return {
         create_news: (news) => {
-            dispatch(create_news(news))
+            dispatch(create_news(news));
         }
     };
 };

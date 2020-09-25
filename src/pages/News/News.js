@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { SearchPanel } from '../../components/SearchPanel/SearchPanel';
+import SearchPanel from '../../components/SearchPanel/SearchPanel';
 import NewsItem from '../../components/NewsItem/NewsItem';
 import CreateNews from '../../components/CreateNews/CreateNews';
-import './News.css'
+import './News.css';
 
 const News = (props) => {
 
@@ -16,7 +16,7 @@ const News = (props) => {
             { role === 'user' ? <CreateNews /> : null }
         </div>
     );
-}
+};
 
 const mapStateToProps = (state) => {
     return {
