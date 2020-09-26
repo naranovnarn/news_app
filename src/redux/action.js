@@ -42,11 +42,11 @@ export function GET_DATA_LOCAL(state, payload) {
 
 export function DELETE_ITEM(state, payload) {
     const { id } = payload;
-    const newsList = state.newsList;
+    const newsList =[... state.newsList];
     const indexItem = newsList.map(item => item.id).indexOf(id);
     if (indexItem !== -1) {
         newsList.splice(indexItem, 1);
-        const nextState = { ...state, newsList: [...newsList]};
+        const nextState = { ...state, newsList};
         localStorage.setItem('newsList', JSON.stringify(newsList));
         return nextState;
     }
@@ -54,10 +54,10 @@ export function DELETE_ITEM(state, payload) {
 
 export function APPROVE_ITEM(state, payload) {
     const { id } = payload;
-    let newsList = state.newsList;
+    let newsList = [...state.newsList];
     const item = newsList.find(item => item.id === id);
     item.isApproved = true;
-    const nextState = { ...state, newsList: [...newsList]};
+    const nextState = { ...state, newsList};
     localStorage.setItem('newsList', JSON.stringify(newsList));
     return nextState;
 }
